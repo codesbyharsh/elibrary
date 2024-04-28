@@ -38,7 +38,7 @@ const UploadPage = ({ setBooks, setNewFileData }) => {
       formData.append('authorName', bookInfo.authorName);
       formData.append('description', bookInfo.description);
 
-      const response = await axios.post('http://localhost:5000/upload', formData, {
+      const response = await axios.post('https://api-blr2.onrender.com/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
