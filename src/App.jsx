@@ -19,7 +19,7 @@ import { signOut } from "firebase/auth";
 import {useDispatch} from 'react-redux';
 import { NavLink } from "react-router-dom";
 import {setUser} from './pages/LoginPage/store/usersSlice.js'
-
+import FullPageLoader from './Components/FullPageLoader/FullPageLoader.jsx';
 const App = () => {
   const [books, setBooks] = useState([]);
   const [filteredBooks, setFilteredBooks] = useState([]);
