@@ -1,13 +1,14 @@
 {
 
     "version": 2,
+    "name": "elibrary",
     "builds": [
-        {"src":"*.js","use":"@vercel/node"}
+        {"src":"*app.js","use":"@vercel/node"}
     ],
     "routes":[
         {
             "src":"/(.*)",
-            "dest":"/"
+            "dest":"/app.js"
     }
     ]
     }
