@@ -16,7 +16,7 @@ function DeletePage(book ) {
   // Function to fetch books from the server
   const fetchBooks = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/books');
+      const response = await axios.get('https://elibrary-5l32.vercel.app/books');
       setBooks(response.data);
     } catch (error) {
       console.error('Error fetching books:', error);
@@ -37,7 +37,7 @@ function DeletePage(book ) {
     try {
       console.log('Book ID:', book); // Log the book ID to verify its structure
   
-      await axios.delete(`http://localhost:5000/books/${bookId}`);
+      await axios.delete(`https://elibrary-5l32.vercel.app/books/${bookId}`);
       // Filter out the deleted book from the state
       setBooks(prevBooks => prevBooks.filter(book => book._id !== bookId));
       // Clear the selected book if it's deleted

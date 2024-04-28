@@ -50,7 +50,7 @@ function handleSignOut(){
   const fetchBooks = async () => {
     try {
       // Make a GET request to fetch books from the server
-      const response = await axios.get('http://localhost:5000/books');
+      const response = await axios.get('https://elibrary-5l32.vercel.app/books');
       
       // If the request is successful, update the state with the fetched books
       setBooks(response.data);
@@ -72,7 +72,7 @@ function handleSignOut(){
   const handleNewBook = async (newBook) => {
     try {
       // Make a POST request to your backend API to save the new book data
-      const response = await axios.post('http://localhost:5000/upload', newBook);
+      const response = await axios.post('https://elibrary-5l32.vercel.app/upload', newBook);
       
       // If the request is successful, update the state with the new book
       const savedBook = response.data;
@@ -90,7 +90,7 @@ function handleSignOut(){
   const handleDeleteBook = async (bookId) => {
     try {
       // Make a DELETE request to your backend API to delete the book
-      await axios.delete(`http://localhost:5000/books/${bookId}`);
+      await axios.delete(`https://elibrary-5l32.vercel.app/${bookId}`);
       
       // If the request is successful, update the state to remove the deleted book
       setBooks(prevBooks => prevBooks.filter(book => book._id !== bookId));

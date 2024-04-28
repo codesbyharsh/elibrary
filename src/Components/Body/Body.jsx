@@ -11,7 +11,7 @@ function Body({ books, newBook, form,}) {
  // Function to delete a book by its ID
  const handleDeleteBook = async (bookId) => {
     try {
-      await axios.delete(`http://localhost:5000/books/${bookId}`);
+      await axios.delete(`hhttps://elibrary-5l32.vercel.app/books/${bookId}`);
       // Filter out the deleted book from the state
       setBooks(prevBooks => prevBooks.filter(book => book._id !== bookId));
       alert('Book deleted successfully!');
