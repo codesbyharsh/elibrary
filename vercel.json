@@ -1,14 +1,15 @@
 {
-
-    "version": 2,
-    "name": "elibrary",
-    "builds": [
-        {"src":"*app.js","use":"@vercel/node"}
-    ],
-    "routes":[
-        {
-            "src":"/(.*)",
-            "dest":"/app.js"
+  "version": 2,
+  "name": "elibrary",
+  "routes": [
+    { "handle": "filesystem" },
+    {
+      "src": "/app.js",
+      "dest": "/app.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
-    ]
-    }
+  ]
+}
