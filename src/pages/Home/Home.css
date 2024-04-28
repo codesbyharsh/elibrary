@@ -1,0 +1,133 @@
+.container{
+   max-width: 100%;
+   overflow-x: hidden;
+  
+}
+
+.m0{
+  margin: 0px 0px 0px 0px!important;
+
+}
+.dark .m0{
+  background: black!important;
+  color: white!important;
+}
+.container::-webkit-scrollbar{
+    display: hidden;
+}
+.dark .container{
+    background: rgba(45, 43, 43, 0.601);
+}
+
+
+.margin-0{
+  margin: 0px 0px 0px 0px !important;
+  border: none!important;
+  
+}
+
+.dark .margin-0{
+background: black;
+color: rgb(255, 255, 255);
+}
+
+  .search-box input {
+    padding: 6px;
+    background: transparent;
+    border: 0;
+    border: none;
+    
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    max-width: 150px; /* Adjust the max-width as needed */
+  }
+  
+  .search-box input::placeholder {
+    color: rgb(0, 0, 0);
+  }
+  
+  .dark .search-box {
+    background: #f7f7f7;
+  }
+  
+  .dark .search-box input {
+    color: #000000!important;
+    background: white!important;
+  }
+  
+  .dark .search-box input::placeholder {
+    color: #000000!important;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+  .search-box {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 70px;
+    max-width: 300px; /* Adjust the maximum width as needed */
+    margin: 10px 10px!important;
+    border: none!important;
+    justify-content: flex-start; /* Align items to the start */
+  }
+  
+  
+  .search-box input {
+    flex: 1; /* Allow the input to grow and fill the available space */
+    padding: 6px;
+    background: transparent;
+
+    outline: 0;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    transition: width 0.3s ease; /* Add transition for input width */
+  }
+  
+  .search-box input::placeholder {
+    color: rgb(0, 0, 0);
+  }
+  
+
+/* Pseudo-element for animation */
+.search-box::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: #000000;
+    border-radius: 50%;
+    transition: width 0.3s ease; /* Add transition for circle width */
+    margin-right: 10px;
+  }
+  
+  /* Hover effect for search box */
+  .search-box:hover input {
+    width: 250px; /* Adjust width on hover */
+  }
+  
+  /* Hover effect for circle */
+  .search-box:hover::after {
+  background: rgb(13, 255, 0); /* Adjust circle width on hover */
+  }
+  
+  .dark .search-box::after {
+    background: rgb(0, 0, 0);
+}
+  
+ .dark .search-box:hover::after{
+    background: rgb(13, 255, 0); 
+ }

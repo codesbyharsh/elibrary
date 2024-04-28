@@ -1,0 +1,95 @@
+.Navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 15px 7%;
+  transition: background-color 0.5s, color 0.5s; /* Transition for background color and text color */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow for depth effect */
+  
+}
+
+.logo {
+  width: 2em;
+  cursor: pointer;
+}
+
+ul {
+  flex: 1;
+  list-style: none;
+  text-align: start;
+}
+
+ul li {
+  display: inline-block;
+  margin: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Add transition for transform */
+}
+
+ul li:hover {
+  transform: translateY(-3px) scale(1.05); /* Apply scale and translate transformation on hover */
+}
+
+ul li a {
+  color: inherit;
+  text-decoration: none;
+  position: relative; /* Add position relative to create space for the underline */
+}
+
+ul li a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: transparent; /* Set initial background color */
+  bottom: -2px; /* Move the underline below the text */
+  left: 0;
+  transition: background-color 0.6s ease; /* Add transition for background color */
+}
+
+ul li a:hover::after {
+  background-color: #000; /* Change background color to black on hover */
+}
+
+.logo-size{
+  width: 70px;
+  margin-right: 10px;
+}
+
+.toggle-icon {
+  width: 50px;
+  cursor: pointer;
+  margin-left: 40px;
+  transition: transform 0.4s ease; /* Add transition for transform */
+}
+
+.toggle-icon:hover {
+  transform: rotate(360deg); /* Rotate icon on hover */
+}
+
+.dark .Navbar {
+  background: #000;
+  color: #fff;
+}
+
+.dark li,
+a {
+  color: white;
+}
+
+
+
+.logout{
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.email-user{
+  margin-left: 10px;
+}
+
+
+

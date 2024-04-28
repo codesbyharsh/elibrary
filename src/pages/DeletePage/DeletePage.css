@@ -1,0 +1,452 @@
+.container{
+    max-width: 100%;
+    overflow-x: hidden;
+   
+ }
+ 
+ .container::-webkit-scrollbar{
+     display: hidden;
+ }
+ .dark .container{
+     background: rgba(45, 43, 43, 0.601);
+ }
+ 
+ 
+   
+   .search-box input {
+     padding: 6px;
+     background: transparent;
+     border: 0;
+     outline: 0;
+     color: rgb(0, 0, 0);
+     font-size: 18px;
+     max-width: 150px; /* Adjust the max-width as needed */
+   }
+   
+   .search-box input::placeholder {
+     color: rgb(0, 0, 0);
+   }
+   
+   .dark .search-box {
+     background: #000000;
+   }
+   
+   .dark .search-box input {
+     color: #ffffff;
+   }
+   
+   .dark .search-box input::placeholder {
+     color: #ffffff;
+   }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   .search-box {
+     display: flex;
+ 
+     align-items: center;
+     background: #ffffff;
+     padding: 10px;
+     border-radius: 70px;
+     max-width: 300px; /* Adjust the maximum width as needed */
+    
+     position: relative; /* Add position relative for pseudo-element */
+     
+  
+   }
+   
+   .search-box input {
+     flex: 1; /* Allow the input to grow and fill the available space */
+     padding: 6px;
+     background: transparent;
+     border: 0;
+     outline: 0;
+     color: rgb(0, 0, 0);
+     font-size: 18px;
+     transition: width 0.3s ease; /* Add transition for input width */
+   }
+   
+   .search-box input::placeholder {
+     color: rgb(0, 0, 0);
+   }
+   
+ 
+ /* Pseudo-element for animation */
+ .search-box::after {
+     content: '';
+     position: absolute;
+     top: 50%;
+     right: 10px;
+     transform: translateY(-50%);
+     width: 10px;
+     height: 10px;
+     background-color: #000000;
+     border-radius: 50%;
+     transition: width 0.3s ease; /* Add transition for circle width */
+   }
+   
+   /* Hover effect for search box */
+   .search-box:hover input {
+     width: 250px; /* Adjust width on hover */
+   }
+   
+   /* Hover effect for circle */
+   .search-box:hover::after {
+   background: rgb(13, 255, 0); /* Adjust circle width on hover */
+   }
+   
+  .dark .search-box::after{
+     background: rgb(255, 255, 255);
+  }
+   
+  .dark .search-box:hover::after{
+     background: rgb(13, 255, 0); 
+  }
+
+  .container1 {
+    display: flex;
+  margin-left: 10px;
+}
+
+.main::-webkit-scrollbar{
+    display: none;
+}
+
+.main {
+    width: calc(80% - 1.5%);
+    background-color: #f0f0f0;
+    overflow-y: auto;
+    height: calc(100vh - 20px);
+    padding: 20px;
+    margin-top: 10px;
+    margin-right: 10px;
+  
+}
+.description::-webkit-scrollbar{
+    display: none;
+}
+.book-description::-webkit-scrollbar{
+    display: none;
+}
+
+
+.description {
+    width: calc(20% - 1.5%);
+    background-color: #e0e0e0;
+    color: black;
+    position: sticky;
+    top: 0;
+    height: calc(100vh - 20px);
+    max-height: 100vh;
+    padding: 15px;
+    margin: 10px;
+    margin-left: auto; /* Adjusted margin-left to auto to move it to the rightmost */
+    float: right; /* Adjusted float to right */
+    margin-right: 10px;
+}
+
+/* Additional styling for book description and ratings */
+.book-description, .ratings {
+    margin-bottom: 20px; /* Add margin-bottom to separate sections */
+    max-height: 15em; /* Maximum height for the description container */
+    overflow-y: auto; /* Enable vertical scrolling for overflow */
+}
+
+/* Content styling */
+.content {
+    margin-bottom: 20px;
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow content to wrap to the next line */
+  
+}
+
+h2 {
+    margin-top: 0;
+}
+
+
+
+.ratings{
+    background: rgb(255, 255, 255);
+    color: black;
+  }
+
+  .dark .description{
+    background: grey;
+    color: white;
+  }
+  
+  .dark .main{
+    background: grey;
+    color: white;
+  }
+  .dark .book-description{
+    color: rgb(255, 255, 255);
+    background: #31363F;
+  }
+  .main{
+    border-radius: 20px;
+    border: none;
+}
+.description{
+  border-radius: 20px;
+  border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* stylesheet for card */
+.card{
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  margin:10px;
+  
+  max-width: 250px;
+  display: inline-block;
+  
+}
+
+.card .Book_Thumbnail{
+  
+  max-width: 55vw;
+  max-height: 22vh;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(4, 4, 4, 0.3);
+  margin-bottom: 10px;
+}
+
+.card .book_name{
+  font-family: "Times New Roman", Times, serif;
+  margin: 0px;
+  color: rgb(0, 0, 0);
+  
+}
+.card .author_name{
+  font-family: "Times New Roman", Times, serif;
+}
+
+button{
+    display: inline-block;
+    background: rgb(255, 255, 255);
+    color: black;
+    border: none;
+    border-radius: 8px;
+    margin: 2px;
+    padding: 5px;
+    cursor: pointer;
+    align-items: center;
+  }
+  
+  
+  .bookmark_logo{
+    width: 1.5em;
+    cursor: pointer;
+    
+    
+    
+    
+  }
+  
+  .Download_btn{
+    background: #3896cc;
+    color: white;
+    transition: background-color 0.3s, color 0.3s
+  }
+  
+  
+  
+  
+  
+  .read-logo{
+    width: 1.5em;
+  cursor: pointer;
+  margin-right: 10px;
+  
+}
+
+
+.read_bookmark_container{
+  float: right;
+}
+
+.Download_btn:hover {
+  color: rgb(255, 255, 255); /* Change the text color */
+  background-color: rgb(0, 0, 0); /* Change the background color */
+}
+
+.dark .card{
+  background: #ced8ff;
+}
+.dark .book_name{
+  color: white;
+}
+
+
+.thumbnail-fit {
+  width: 100%; /* Ensure the image fills the container */
+  height: auto; /* Let the height adjust automatically to maintain aspect ratio */
+  object-fit: cover; /* Maintain aspect ratio and cover entire container */
+  border-radius: 10px; /* Apply border radius */
+  box-shadow: 5px 5px 5px rgba(4, 4, 4, 0.3); /* Add box shadow */
+  border: none; /* Remove border */
+  margin-bottom: 10px; /* Add margin bottom */
+  
+  }
+
+  .book-description .thumbnail-fit img {
+    display: flex;
+    flex-direction: column; /* Arrange content vertically */
+    justify-content: space-between; /* Space content evenly */
+  
+    width: 100%; /* Ensure the image fills the container */
+    height: 100%; /* Set image height to fill the container */
+    object-fit: cover; /* Maintain aspect ratio and cover entire container */
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  
+  .Book_Thumbnail{
+    width: 100%; /* Ensure the image fills the container */
+    height: 50%; /* Set image height */
+    object-fit: cover; /* Maintain aspect ratio and cover entire container */
+    border-radius: 10px;
+    padding: 0px;    
+    
+  }
+
+  
+  
+  .book-description{
+      background: rgb(255, 255, 255);
+      color: black;
+      /* max-height: 30em; */
+      max-height: 90vh;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      border-radius: 10px;
+      border: none;
+      max-width: 100%; /* Ensure it doesn't exceed the container width */
+      overflow-x: hidden; /* Prevent horizontal overflow */
+    
+  
+  }
+
+  
+.book-description h3,
+.book-description p {
+  margin: 0; /* Remove default margins */
+}
+.book-description .text-info {
+  flex-grow: 1; /* Allow the text info to grow to fill remaining space */
+}
+
+.book-description .text-info div {
+  margin-bottom: 20px; /* Add space between text sections */
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 70px;
+    max-width: 300px; /* Adjust the maximum width as needed */
+    position: relative; /* Add position relative for pseudo-element */
+   /* Adjust margin to center horizontally and provide space from the top */
+  }
+  
+  .search-box input {
+    flex: 1; /* Allow the input to grow and fill the available space */
+    padding: 6px;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    transition: width 0.3s ease; /* Add transition for input width */
+  }
+  
+  .search-box input::placeholder {
+    color: rgb(0, 0, 0);
+  }
+  
+  /* Pseudo-element for animation */
+  .search-box::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: #000000;
+    border-radius: 50%;
+    transition: width 0.3s ease; /* Add transition for circle width */
+  }
+  
+  /* Hover effect for search box */
+  .search-box:hover input {
+    width: 250px; /* Adjust width on hover */
+  }
+  
+  /* Hover effect for circle */
+  .search-box:hover::after {
+    background: rgb(13, 255, 0); /* Adjust circle width on hover */
+  }
+  
+  .dark .search-box::after {
+    background: rgb(255, 255, 255);
+  }
+  
+  .dark .search-box:hover::after {
+    background: rgb(13, 255, 0);
+  }
+
+
+
+  .search-box input {
+    flex: 1; /* Allow the input to grow and fill the available space */
+    padding: 6px;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    transition: width 0.3s ease; /* Add transition for input width */
+    max-width: 250px; /* Adjust the maximum width as needed */
+    width: 400px; /* Set initial width to 250px */
+  }
+  
+  /* Hover effect for search box */
+  .search-box:hover input {
+    width: 300px; /* Adjust width on hover */
+  }
+  
+  

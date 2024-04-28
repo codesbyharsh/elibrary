@@ -1,0 +1,133 @@
+.footer {
+  width: 100%;
+  background-color: #fff;
+  color: black;
+  padding: 15px 7%;
+  transition: 0.5s;
+  position: relative; /* Add relative positioning for 3D animation */
+}
+
+.container-footer {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+}
+
+.about,
+.social-media {
+  flex: 1;
+  padding: 0 10px; /* Add padding to separate sections */
+}
+
+.about h3,
+.social-media h3 {
+  margin-top: 0;
+  text-align: center; /* Center the titles */
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center; /* Center the social media icons */
+  gap: 20px; /* Add space between icons */
+  margin-top: 20px;
+}
+
+.social-icons i {
+  font-size: 24px; /* Adjust the size of icons */
+  transition: transform 0.3s ease-in-out; /* Add transition for smooth animation */
+}
+
+.social-icons i:hover {
+  transform: translateY(-5px); /* Move icons upwards on hover */
+  color: #00fff7;
+}
+
+.dark .footer {
+  background-color: #000;
+  color: #fff;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.copyright p {
+  font-size: 14px;
+}
+
+.social-media,.about{
+  padding: 2vh;
+}
+.fab{
+  padding: 1vw;
+  cursor: pointer;
+}
+.aboutcontent{
+  padding: 1vw;
+}
+
+.about h3 {
+  margin-top: 0;
+  text-align: center; /* Center the title */
+  position: relative; /* Add relative positioning for 3D animation */
+  font-size: 24px; /* Adjust the font size */
+}
+
+.about .aboutcontent {
+  position: relative; /* Add relative positioning for 3D animation */
+  text-align: justify; /* Justify text for better readability */
+  font-size: 16px; /* Adjust the font size */
+  line-height: 1.5; /* Set line height for better spacing */
+}
+
+.about h3::after,
+.about .aboutcontent::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px; /* Adjust the height of the underline */
+  background-color: #00fff7; /* Set the color of the underline */
+  transform: scaleX(0); /* Initially set the width of the underline to zero */
+  transition: transform 0.3s ease-in-out; /* Add transition for smooth animation */
+}
+
+.about h3:hover::after,
+.about .aboutcontent:hover::after {
+
+  transform: scaleX(1); /* Expand the width of the underline on hover */
+}
+
+
+@keyframes typing {
+  from { width: 0; }
+}
+
+.about .aboutcontent {
+  position: relative;
+  text-align: justify;
+  font-size: 16px;
+  line-height: 1.5;
+  width: 100%;
+  animation: typing 1s steps(20, end) forwards; /* Adjust duration and steps */
+}
+
+/* Add hover effect to reveal full content instantly */
+.about .aboutcontent:hover {
+  width: auto;
+  /* Disable typing animation on hover */
+}
+
+
+.copyright p {
+  font-size: 14px;
+  display: inline-block; /* Ensure the copyright text is displayed as a block element */
+  transition: transform 0.20s; /* Add transition for smooth animation */
+}
+
+.copyright:hover p {
+  transform: rotateY(360deg); /* Apply a 360-degree rotation on hover */
+}

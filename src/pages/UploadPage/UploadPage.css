@@ -1,0 +1,127 @@
+.size {
+  width: 90%; /* Adjust the width to leave space on the sides */
+  padding: 10px; /* Keep padding for top and bottom */
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-top: 2vh;
+  margin-left: auto; /* Move the input to the right */
+  margin-right: auto; /* Move the input to the left */
+}
+.mm{
+margin-top: 20px!important;
+}
+
+.container-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  max-width: 50vw;
+  background: rgb(144, 107, 179);
+  height: auto;
+  width: auto;
+  margin-bottom: 30px;
+  padding-left: 20px; /* Add space on the left side */
+  padding-right: 20px; /* Add space on the right side */
+  border-radius: 20px;
+}
+
+  .file-drop-zone {
+    width: 300px;
+    height: 150px;
+    border: 2px dashed #ccc;
+    border-radius: 5px;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 20px;
+    text-align: center;
+    transition: border-color 0.3s ease;
+    transition:  0.3s ease;
+  }
+  
+  .file-drop-zone input {
+    display: none;
+  }
+  
+  .file-drop-zone p {
+    margin: 0;
+  }
+
+
+  
+.dragging  .file-drop-zone {
+  border-color: #00bcd4;
+  
+  background: #4caf50;
+  padding: 30px;
+}
+.dragging  .file-drop-zone {
+  border-color: #00bcd4;
+  
+  background: #4caf50;
+  padding: 30px;
+}
+
+  
+  .image-drop-zone {
+    border-color: #4caf50;
+  }
+  .image-drop-zone:hover {
+    border-color: #888;
+    padding: 30px;
+  }
+  
+  .document-drop-zone {
+    border-color: #2196f3;
+  }
+  .document-drop-zone:hover {
+    border-color: #888;
+    padding: 30px;
+  }
+  
+  button {
+    padding: 10px 30px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+  }
+  
+  button:hover {
+    background-color: green;
+    color: #fff;
+  }
+  
+  .container-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    max-width: 50vw;
+    background: rgb(144, 107, 179);
+    height: auto;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+  }
+  
+
+
+  .dark .container-upload{
+    background: #000;
+    color: white;
+  }
+
+
+  .height1{
+    height: 200px;
+  }
+
+  
