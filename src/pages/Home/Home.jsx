@@ -12,7 +12,7 @@ const Home = () => {
 
   useEffect(() => {
     // Fetch books from the server when the component mounts
-    axios.get('http://localhost:5000/books')
+    axios.get('https://api-blr2.onrender.com/books')
       .then(response => {
         setBooks(response.data);
       })
@@ -29,7 +29,7 @@ const Home = () => {
   // Function to delete a book by its ID
   const handleDeleteBook = async (bookId) => {
     try {
-      await axios.delete(`http://localhost:5000/books/${bookId}`);
+      await axios.delete(`https://api-blr2.onrender.com/books/${bookId}`);
       // Filter out the deleted book from the state
       setBooks(prevBooks => prevBooks.filter(book => book._id !== bookId));
       alert('Book deleted successfully!');
