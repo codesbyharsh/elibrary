@@ -26,13 +26,7 @@ const App = () => {
   const user=useSelector(selectUsers);
 const dispatch = useDispatch();
 
-  app.use(cors(
-    {
-      origin:{"https://deploy-mern-1whq.vercel.app"},
-      methods:["POST","GET"],
-      credentials:true
-    }
-    ));
+ 
 
 function handleSignOut(){
   if(confirm('Are you sure you want to logout?')){
