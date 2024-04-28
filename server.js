@@ -9,13 +9,16 @@ const mongoose = require('mongoose');
 const app = express();
 const PORT = 5000;
 
+  app.use(cors(
+    {
+      origin:{"https://deploy-mern-1whq.vercel.app"},
+      methods:["POST","GET"],
+      credentials:true
+    }
+    ));
 
 
 
-
-// Enable CORS
-app.use(cors());
-// Configure AWS credentials for SDK v3
 
 
 const s3 = new AWS.S3({
