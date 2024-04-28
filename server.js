@@ -19,9 +19,6 @@ const PORT = 5000;
 
 
 
-// Enable CORS
-app.use(cors());
-// Configure AWS credentials for SDK v3
 
 
 const s3 = new AWS.S3({
