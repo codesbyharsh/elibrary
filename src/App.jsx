@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import {BrowserRouter, Routes, Route } from 'react-router-dom';
-import Navbar from './Components/Navbar/Navbar';
-import Body from './Components/Body/Body';
-import Footer from './Components/Footer/Footer';
+import Navbar from './Components/Navbar/Navbar.jsx';
+import Body from './Components/Body/Body.jsx';
+import Footer from './Components/Footer/Footer.jsx';
 
-import Home from './pages/Home/Home';
+import Home from './pages/Home/Home.jsx';
 import UploadPage from './pages/UploadPage/UploadPage.jsx';
 import axios from 'axios'; 
 import './App.css';
