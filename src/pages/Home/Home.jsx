@@ -12,7 +12,7 @@ const Home = () => {
 
   useEffect(() => {
     // Fetch books from the server when the component mounts
-    axios.get('https://elibrary-5l32.vercel.app/books')
+    axios.get('http://localhost:5000/books')
       .then(response => {
         setBooks(response.data);
       })
@@ -29,7 +29,7 @@ const Home = () => {
   // Function to delete a book by its ID
   const handleDeleteBook = async (bookId) => {
     try {
-      await axios.delete(`https://elibrary-5l32.vercel.app/books/${bookId}`);
+      await axios.delete(`http://localhost:5000/books/${bookId}`);
       // Filter out the deleted book from the state
       setBooks(prevBooks => prevBooks.filter(book => book._id !== bookId));
       alert('Book deleted successfully!');
