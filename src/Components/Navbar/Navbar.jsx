@@ -1,5 +1,6 @@
 import React from 'react';
 import './Navbar.css';
+import { Routes, Route, Navigate } from 'react-router-dom'; // Import Navigate component
 import logo_light from '../../assets/logo-black.png';
 import logo_dark from '../../assets/logo-white.png';
 import search_icon_light from '../../assets/search-w.png';
@@ -15,7 +16,7 @@ import { useDispatch } from 'react-redux';
 import { setUser } from '../../pages/LoginPage/store/usersSlice.js';
 import elibrary from '../../assets/elibrary.png'
 
-
+import UploadPage from '../../pages/UploadPage/UploadPage.jsx';
 
 
 
@@ -56,7 +57,19 @@ const ADMIN = import.meta.env.VITE_ADMIN;
   const currentUser = auth.currentUser;
   const isAdmin = currentUser && currentUser.email === (ADMIN);
 
- 
+  // // Redirect to appropriate page after login
+  // if (currentUser) {
+  //   if (isAdmin) {
+  //     if (window.location.pathname !== '/DeletePage') {
+  //       window.location.href = '/DeletePage';
+      
+  //     }
+  //   } else {
+  //     if (window.location.pathname !== '/') {
+  //       window.location.href = '/';
+  //     }
+  //   }
+  // }
 
   return (
     <nav className={`navbar ${theme}`}>
@@ -82,6 +95,16 @@ const ADMIN = import.meta.env.VITE_ADMIN;
         
         <button className='logout' onClick={handleSignOut}>Logout</button>
       </div>
+      <Routes>
+      {/* Redirect based on isAdmin */}
+      {isAdmin ? 
+      (
+      <Route path="/" element={<Navigate to="/DeletePage"  />} /> 
+      )
+      :
+       (<Route path="*" element={<Navigate to="/" />} />)}
+     
+    </Routes>
     </nav>
   );
 }
