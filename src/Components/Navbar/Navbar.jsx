@@ -14,22 +14,22 @@ import { auth } from '../../pages/LoginPage/firebase/config.js';
 import { useDispatch } from 'react-redux';
 import { setUser } from '../../pages/LoginPage/store/usersSlice.js';
 import elibrary from '../../assets/elibrary.png'
+
+
+
+
+
+
+
+
+
 const Navbar = ({ theme, setTheme  }) => {
   const dispatch = useDispatch();
-  const history = useHistory();
-  useEffect(() => {
-    const currentUser = auth.currentUser;
-    const isAdmin = currentUser && currentUser.email === import.meta.env.VITE_ADMIN;
-
-    if (currentUser) {
-      if (isAdmin && history.location.pathname !== '/DeletePage') {
-        history.push('/DeletePage');
-      } else if (!isAdmin && history.location.pathname !== '/') {
-        history.push('/');
-      }
-    }
-  }, [history]);
+  
  
+
+
+  
   function handleSignOut() {
     if (confirm('Are you sure you want to logout?')) {
       localStorage.removeItem('userCredentials');
@@ -47,7 +47,11 @@ const Navbar = ({ theme, setTheme  }) => {
     
   }
 
+ 
+
 const ADMIN = import.meta.env.VITE_ADMIN;
+
+
 
   const currentUser = auth.currentUser;
   const isAdmin = currentUser && currentUser.email === (ADMIN);
