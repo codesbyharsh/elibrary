@@ -99,7 +99,7 @@ const ADMIN = import.meta.env.VITE_ADMIN;
       {/* Redirect based on isAdmin */}
       {isAdmin ? 
       (
-      <Route path="/" element={<Navigate to="/DeletePage"  />} /> 
+      <Route path="/" element={<Navigate to="/UploadPage"  />}  /> 
       )
       :
        (<Route path="*" element={<Navigate to="/" />} />)}
