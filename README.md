@@ -16,28 +16,35 @@
 
 ### 🛠️ Deployment Sequence
 
-1. **Backend (Node + Express) on Render**  
+1. **Backend (Node + Express) on Render** 
+```bash 
  -  Handles file upload, deletion, and book management
 
   - Originally used AWS S3 for PDF storage
 
  -  Connected to MongoDB Atlas
-
+```
 2. **Frontend (React + Firebase Auth) on Vercel**  
+```bash
   - Add backend API URL to .env before deployment
-
+```
 3. **Firebase Authentication**  
+```bash
   - Email/Password Login
 
   - Registration
 
   - Forgot Password
+```
 
 4. **Scalable Book Storage Using AWS S3 Bucket**  
-  Using S3 bucket we are able to store PDF's of Books any size.
-
+```bash
+  Using S3 bucket we are able to store PDFs of Books any size.
+```
 5. **MongoDB Atlas**
+```bash
    Stores user info, book metadata, and admin operations
+```
 ---
 
 ## 🔧 Components Overview
@@ -67,14 +74,14 @@ This app runs using three main components:
 
 ---
 ## 📦 Prerequisites
-
+```bash
 - Node.js (LTS version)
 - MongoDB Atlas account
 - AWS Account
 - Firebase project with Authentication enabled
 - Vercel & Render accounts for hosting
 - `.env` file configured with all credentials
-
+```
 ---
 
 ## ⚙️ Tech Stack
@@ -121,8 +128,9 @@ npm run dev
 Application will run on: http://localhost:5173 
 
 ---
- # Implimentation #
+# Implimentation #
 
+## Client Side
 ### 🔐 Login Page
 ![Login](./src/public/login_registration.png)
 
@@ -130,14 +138,51 @@ Application will run on: http://localhost:5173
 ![Login](./src/public/password_recovery.png)
 
 ### 🏠 Homepage
+ **Dark Theme**
 ![Homepage](./src/public/home_dark_theme.png)
+
+ **Light Theme**
 ![Homepage](./src/public/home_light_theme.png)
 
+
+### 📤 Read Book 
+![Read Book](./src/public/read_book.png)
+
+---
+## Admin Side
 ### 📤 Upload Book Page
 ![Upload Book](./src/public/upload_book.png)
 
 ### 📤 Delete Book Page
 ![Delete Book](./src/public/elibra_admin_delete.png)
+
+---
+## Backend Work
+### 📤 AWS S3 Bucket Storage
+#### Bucket
+![Bucket](./src/public/S3_Storage_bucket.png)
+#### Folders
+![Folders](./src/public/S3_bucket_folders.png)
+#### Book Files
+![Book Files](./src/public/Books_Files.png)
+#### Book Thumbnails
+![Book Thumbnails](./src/public/Thumbnail_files.png)
+
+### Firebase Authentic Users List
+![Firebase Users List](./src/public/firebase_authentic_users_list.png)
+
+
+### MongoDB Books Information
+![MongoDB Books Info](./src/public/mongoDB_books_info.png)
+
+---
+## Diagrams
+
+### Flow Chart
+![Flow Chart](./src/public/Flow_chart.png)
+
+### Sequence Diagram
+![Sequence Diagram](./src/public/sequence_diagram.png)
 
 ---
 
