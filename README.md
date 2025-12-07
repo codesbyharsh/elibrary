@@ -1,6 +1,6 @@
-# 📚 eLibrary – Online Digital Library System
+# 📚 ELibrary – Online Digital Library System
 
-**eLibrary** is a complete digital library web application where users can browse, read, and download books, while admins can upload and manage PDF content. Firebase Authentication handles user login & registration. PDF storage, and image storage not working due to AWS free-tier expiry.
+**ELibrary** is a complete digital library web application where users can browse, read, and download books, while admins can upload and manage PDF content. Firebase Authentication handles user login & registration. PDF storage, and image storage not working due to AWS free-tier expiry.
 
 ---
 
@@ -8,32 +8,30 @@
 
 | Platform | Status | Link |
 |----------|--------|------|
-| **Frontend** (Vercel) | 🔥 Active | [https://elibra.vercel.app/](https://elibrary-teal.vercel.app/) |
-| **Backend API** (Render) | ⚡ Running | [https://api-elibrary.onrender.com](https://api-elibrary.onrender.com) |
-| **Admin Dashboard** | 🔐 Secure | [Admin Login](https://elibrary-teal.vercel.app/login) |
-
-📥 [Full Project Video Demo](https://drive.google.com/file/d/YOUR_VIDEO_ID/view)
+| **Frontend** (Vercel) | 🔥 Active | [https://elibra.vercel.app/](https://elibra.vercel.app/) |
+| **Backend API** (Render) | ⚡ Stopped | [https://api-elibrary.onrender.com](https://api-elibrary.onrender.com) |
+| **Admin Dashboard** | 🔐 Secure | [Admin Login](https://elibra.vercel.app/) |
 
 ---
 
 ### 🛠️ Deployment Sequence
 
 1. **Backend (Node + Express) on Render**  
-   Handles file upload, deletion, and book management
+ -  Handles file upload, deletion, and book management
 
-   Originally used AWS S3 for PDF storage
+  - Originally used AWS S3 for PDF storage
 
-   Connected to MongoDB Atlas
+ -  Connected to MongoDB Atlas
 
 2. **Frontend (React + Firebase Auth) on Vercel**  
-   Add backend API URL to .env before deployment
+  - Add backend API URL to .env before deployment
 
 3. **Firebase Authentication**  
-   Email/Password Login
+  - Email/Password Login
 
-   Registration
+  - Registration
 
-   Forgot Password
+  - Forgot Password
 
 4. **Scalable Book Storage Using AWS S3 Bucket**  
   Using S3 bucket we are able to store PDF's of Books any size.
@@ -47,27 +45,27 @@
 This app runs using three main components:
 
 ### 1. Frontend (React + Firebase Auth)
-➡ Login/Signup
-➡ Forgot Password
-➡ Dark/Light Theme
-➡ Browse Books
-➡ Read / Download Book
-- 🌐 [Repository](https://github.com/codesbyharsh/elibrary-frontend.git)
+- Login/Signup
+- Forgot Password
+- Dark/Light Theme
+- Browse Books
+- Read / Download Book
+- 🌐 [Repository](https://github.com/codesbyharsh/elibrary.git)
 - 🌐 [Live Frontend](https://elibra.vercel.app/)
 
 ### 2. Backend (Node.js + Express + MongoDB)
-➡ Admin login
-➡ Upload PDF (to S3 / Cloudinary)
-➡ Delete Book
-➡ CRUD for books
+- Admin login
+- Upload PDF (to S3)
+- Delete Book
+- CRUD for books
 - 🌐 [Repository](https://github.com/codesbyharsh/API-Elibrary.git)
 
 ### 3. AWS S3 Bucket (PDF Storage)
-➡Cloud-based storage for book files and thumbnails.
-➡ Accepts PDFs, No file-size issues, Free-tier friendly
+- Cloud-based storage for book files and thumbnails
+
+- Accepts PDFs, No file-size issues, Free-tier friendly
 
 ---
-
 ## 📦 Prerequisites
 
 - Node.js (LTS version)
@@ -95,7 +93,7 @@ This app runs using three main components:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/codesbyharsh/elibrary-frontend.git
+git clone https://github.com/codesbyharsh/elibrary.git
 cd elibrary-frontend
 ```
 
@@ -123,22 +121,54 @@ npm run dev
 Application will run on: http://localhost:5173 
 
 ---
- ## Implimentation ##
-```bash
+ # Implimentation #
+
 ### 🔐 Login Page
-![Login](./public/login_registration.png)
+![Login](./src/public/login_registration.png)
 
 ### 🔐 Password Recovery 
-![Login](./public/password_recovery.png)
+![Login](./src/public/password_recovery.png)
 
 ### 🏠 Homepage
-![Homepage](./public/home_dark_theme.png)
-![Homepage](./public/home_light_theme.png)
+![Homepage](./src/public/home_dark_theme.png)
+![Homepage](./src/public/home_light_theme.png)
 
 ### 📤 Upload Book Page
-![Upload Book](./public/upload_book.png)
+![Upload Book](./src/public/upload_book.png)
 
 ### 📤 Delete Book Page
-![Delete Book](./public/elibra_admin_delete.png)
+![Delete Book](./src/public/elibra_admin_delete.png)
 
+---
+
+### 🙌 Thanks for Checking Out ELibrary!
+
+***ELibrary is one of my full-stack portfolio projects built to learn real-world concepts like:***
+
+``` bash
+- Scalable PDF storage
+
+- Role-based access (Admin/User)
+
+- Firebase Authentication
+
+- Real backend deployment using Render
+
+- Cloud hosting using Vercel
+
+- MongoDB Atlas integration
+
+- File upload handling
 ```
+---
+
+**If you want to collaborate, improve this project, or discuss ideas, feel free to connect!**
+
+📧 Email: jadhavh655@gmail.com
+
+💼 GitHub: https://github.com/codesbyharsh
+
+🌐 [Portfolio](https://portfolio-harshal-jadhav.vercel.app/)
+
+---
+## ⭐ If you liked this project, don’t forget to star the repository!
