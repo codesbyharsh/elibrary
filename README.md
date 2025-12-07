@@ -17,34 +17,34 @@
 ### 🛠️ Deployment Sequence
 
 1. **Backend (Node + Express) on Render** 
-```bash 
+
  -  Handles file upload, deletion, and book management
 
   - Originally used AWS S3 for PDF storage
 
  -  Connected to MongoDB Atlas
-```
+
 2. **Frontend (React + Firebase Auth) on Vercel**  
-```bash
+
   - Add backend API URL to .env before deployment
-```
+
 3. **Firebase Authentication**  
-```bash
+
   - Email/Password Login
 
   - Registration
 
   - Forgot Password
-```
+
 
 4. **Scalable Book Storage Using AWS S3 Bucket**  
-```bash
+
   Using S3 bucket we are able to store PDFs of Books any size.
-```
+
 5. **MongoDB Atlas**
-```bash
+
    Stores user info, book metadata, and admin operations
-```
+
 ---
 
 ## 🔧 Components Overview
